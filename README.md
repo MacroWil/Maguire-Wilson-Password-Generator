@@ -18,7 +18,7 @@ Using any web browser, open the provided URL and press the big red button.
 
 ## Usage
 
-generate random passwors with your choice of capitals, lowercase, symbols, and/or numbers.
+Generate random passwors with your choice of capitals, lowercase, symbols, and/or numbers.
 
 ## Credits
 
