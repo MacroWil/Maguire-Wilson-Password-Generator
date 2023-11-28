@@ -1,5 +1,7 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 //define array for lowercase characters
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -9,13 +11,11 @@ var upperCase = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
 var symbols = "!@#$%^&*.,?=_-+{}[]/<>";
 //define array for numbers characters
 var numbers = "1234567890";
-var outputArray = "";
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
+  var outputArray = "";
+  var passwordOutput = "";
   var userLength = prompt("Enter a number between 8 and 128");
   if (userLength < 8) {
     alert("Number must be greater than 8");
@@ -50,14 +50,13 @@ function writePassword() {
       }
       console.log(outputArray);
       //random selector
-      function getMultipleRandom(outputArray, num) {
-        const shuffled = [...outputArray].sort(() => 0.5 - Math.random());
-
-        return shuffled.slice(0, num);
+      for (var i = 0; i < userLength; i++) {
+        String.prototype.concat(
+          (passwordOutput =
+            passwordOutput +
+            outputArray[Math.floor(Math.random() * outputArray.length)])
+        );
       }
-      // generate random string and fix array to not have commas
-      passwordOutput = getMultipleRandom(outputArray, userLength);
-      passwordOutput = passwordOutput.join("");
       console.log(passwordOutput);
       passwordText.value = passwordOutput;
       // reset for next run
