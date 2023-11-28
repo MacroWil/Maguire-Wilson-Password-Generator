@@ -18,11 +18,11 @@ Using any web browser, open the provided URL and press the big red button.
 
 ## Usage
 
-Generate random passwors with your choice of capitals, lowercase, symbols, and/or numbers.
+Generate random password with your choice of capitals, lowercase, symbols, and/or numbers.
 
 ## Credits
 
-Maguire Wilson. Thanks to Borislav Hadzheiv for example on random string generator. (https://bobbyhadz.com/blog/javascript-get-multiple-random-elements-from-array)
+Maguire Wilson.
 Thanks to Xandromus for starter code. https://github.com/coding-boot-camp/friendly-parakeet
 
 ## Features
