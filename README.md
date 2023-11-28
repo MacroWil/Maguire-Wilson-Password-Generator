@@ -23,6 +23,7 @@ Generate random passwors with your choice of capitals, lowercase, symbols, and/o
 ## Credits
 
 Maguire Wilson. Thanks to Borislav Hadzheiv for example on random string generator. (https://bobbyhadz.com/blog/javascript-get-multiple-random-elements-from-array)
+Thanks to Xandromus for starter code. https://github.com/coding-boot-camp/friendly-parakeet
 
 ## Features
 
