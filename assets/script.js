@@ -30,27 +30,26 @@ function writePassword() {
     return;
   }
   if (confirm("Would you like lowecase letters?")) {
-    String.prototype.concat((outputArray = outputArray + lowerCase));
+    outputArray = outputArray + lowerCase;
   }
   if (confirm("Would you like uppercase letters?")) {
-    String.prototype.concat((outputArray = outputArray + upperCase));
+    outputArray = outputArray + upperCase;
   }
   if (confirm("Would you like symbols?")) {
-    String.prototype.concat((outputArray = outputArray + symbols));
+    outputArray = outputArray + symbols;
   }
   if (confirm("Would you like numbers?")) {
-    String.prototype.concat((outputArray = outputArray + numbers));
-  } else {
+    outputArray = outputArray + numbers;
+  }
+  if (outputArray === "") {
     alert("Please choose some characters for your password.");
     return;
   }
   console.log(outputArray);
   //random selector
   for (var i = 0; i < userLength; i++) {
-    String.prototype.concat(
-      (passwordOutput +=
-        outputArray[Math.floor(Math.random() * outputArray.length)])
-    );
+    passwordOutput +=
+      outputArray[Math.floor(Math.random() * outputArray.length)];
   }
   console.log(passwordOutput);
   var passwordText = document.querySelector("#password");
