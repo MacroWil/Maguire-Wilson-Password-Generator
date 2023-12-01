@@ -28,39 +28,33 @@ function writePassword() {
   if (isNaN(userLength)) {
     alert("Must be a number");
     return;
-  } else {
-    var lower = confirm("Would you like lowecase letters?");
-    var upper = confirm("Would you like uppercase letters?");
-    var symbolsSelect = confirm("Would you like symbols?");
-    var numbersSelect = confirm("Would you like numbers?");
-    var passwordText = document.querySelector("#password");
-    var password = generatePassword();
-    function generatePassword() {
-      if (lower === true) {
-        String.prototype.concat((outputArray = outputArray + lowerCase));
-      }
-      if (upper === true) {
-        String.prototype.concat((outputArray = outputArray + upperCase));
-      }
-      if (symbolsSelect === true) {
-        String.prototype.concat((outputArray = outputArray + symbols));
-      }
-      if (numbersSelect === true) {
-        String.prototype.concat((outputArray = outputArray + numbers));
-      }
-      console.log(outputArray);
-      //random selector
-      for (var i = 0; i < userLength; i++) {
-        String.prototype.concat(
-          (passwordOutput =
-            passwordOutput +
-            outputArray[Math.floor(Math.random() * outputArray.length)])
-        );
-      }
-      console.log(passwordOutput);
-      passwordText.value = passwordOutput;
-      // reset for next run
-      return;
-    }
   }
+  if (confirm("Would you like lowecase letters?")) {
+    String.prototype.concat((outputArray = outputArray + lowerCase));
+  }
+  if (confirm("Would you like uppercase letters?")) {
+    String.prototype.concat((outputArray = outputArray + upperCase));
+  }
+  if (confirm("Would you like symbols?")) {
+    String.prototype.concat((outputArray = outputArray + symbols));
+  }
+  if (confirm("Would you like numbers?")) {
+    String.prototype.concat((outputArray = outputArray + numbers));
+  } else {
+    alert("Please choose some characters for your password.");
+    return;
+  }
+  console.log(outputArray);
+  //random selector
+  for (var i = 0; i < userLength; i++) {
+    String.prototype.concat(
+      (passwordOutput +=
+        outputArray[Math.floor(Math.random() * outputArray.length)])
+    );
+  }
+  console.log(passwordOutput);
+  var passwordText = document.querySelector("#password");
+  passwordText.value = passwordOutput;
+  // reset for next run
+  return;
 }
